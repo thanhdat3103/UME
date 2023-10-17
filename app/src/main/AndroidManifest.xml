@@ -15,6 +15,54 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
+            android:name=".PhanTichKetQua"
+            android:exported="false" />
+        <activity
+            android:name=".BieuDoKetQua"
+            android:exported="false" />
+        <activity
+            android:name=".TraLoiTracNghiem"
+            android:exported="false" />
+        <activity
+            android:name=".StartTracNghiem"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiT"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiN"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiR"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiM"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiV"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiH"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiD"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiC"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiB"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiA"
+            android:exported="false" />
+        <activity
+            android:name=".ChonToHopMon"
+            android:exported="false" />
+        <activity
+            android:name=".ChonTinhNang"
+            android:exported="false" />
+        <activity
             android:name=".ThongTinHocSinh"
             android:exported="false" />
         <activity

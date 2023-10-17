@@ -1,0 +1,19 @@
+<!-- res/drawable/custom_edittext_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Trạng thái khi tương tác -->
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:right="5dp" android:top="5dp" android:bottom="5dp">
+                <bitmap android:src="@drawable/button_edittext" />
+            </item>
+        </layer-list>
+    </item>
+    <!-- Trạng thái mặc định -->
+    <item>
+        <layer-list>
+            <item android:right="5dp" android:top="5dp" android:bottom="5dp">
+                <bitmap android:src="@drawable/button_edittext" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

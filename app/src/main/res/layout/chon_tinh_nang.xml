@@ -1,0 +1,68 @@
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_chon_tinh_nang"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ten_hoc_sinh"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="235dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/trac_nghiem_so_thich"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/trac_nghiem_so_thich" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/tim_hieu_nghe_nghiep" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/to_hop_mon"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/to_hop_mon" />
+
+            <Button
+                android:id="@+id/cac_nhom_tinh_cach"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/cac_nhom_tinh_cach" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

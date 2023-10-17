@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/canh_bao_all_duoi_5_or_all_bang_nhau"
+        android:orientation="vertical"
+        android:id="@+id/canh_bao"
+        android:visibility="gone">
+    </LinearLayout>
+</layout>
