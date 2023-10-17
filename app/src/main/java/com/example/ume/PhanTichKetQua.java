@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.ume.databinding.PhanTichKetQuaBinding;
 
+import java.util.Arrays;
+
 public class PhanTichKetQua extends Activity {
 
     int countKiThuat, countNgheThuat, countNghienCuu, countQuanLi, countXaHoi, countNghiepVu;
@@ -28,10 +30,35 @@ public class PhanTichKetQua extends Activity {
             countNghiepVu = intent.getIntExtra("countNghiepVu", 0);
         }
 
-        if (countKiThuat < 5 && countNgheThuat < 5 && countNghienCuu < 5 && countQuanLi < 5 && countXaHoi < 5 && countNghiepVu < 5) {
-            binding.canhBao.setVisibility(View.VISIBLE);
-        } else if (countKiThuat == countNgheThuat || countKiThuat == countNghienCuu || countKiThuat == countQuanLi || countKiThuat == countXaHoi || countKiThuat == countNghiepVu || countNgheThuat == countNghienCuu || countNgheThuat == countQuanLi || countNgheThuat == countXaHoi || countNgheThuat == countNghiepVu || countNghienCuu == countQuanLi || countNghienCuu == countXaHoi || countNghienCuu == countNghiepVu || countQuanLi == countXaHoi || countQuanLi == countNghiepVu || countXaHoi == countNghiepVu) {
+        int[] counts = {countKiThuat, countNgheThuat, countNghienCuu, countQuanLi, countXaHoi, countNghiepVu};
+
+        Arrays.sort(counts);
+        int highestCount = counts[counts.length - 1];
+        int secondHighestCount = counts[counts.length - 2];
+
+        if (highestCount < 5 || highestCount == secondHighestCount) {
             binding.canhBao.setVisibility(View.VISIBLE);
         }
+        else {
+            if (countKiThuat == highestCount) {
+                binding.nhomKyThuatCaoNhat.setVisibility(View.VISIBLE);
+            }
+            else if (countNgheThuat == highestCount) {
+                binding.nhomNgheThuatCaoNhat.setVisibility(View.VISIBLE);
+            }
+            else if (countNghienCuu == highestCount) {
+                binding.nhomNghienCuuCaoNhat.setVisibility(View.VISIBLE);
+            }
+            else if (countQuanLi == highestCount) {
+                binding.nhomQuanLyCaoNhat.setVisibility(View.VISIBLE);
+            }
+            else if (countXaHoi == highestCount) {
+                binding.nhomXaHoiCaoNhat.setVisibility(View.VISIBLE);
+            }
+            else if (countNghiepVu == highestCount) {
+                binding.nhomNghiepVuCaoNhat.setVisibility(View.VISIBLE);
+            }
+        }
+
     }
 }
