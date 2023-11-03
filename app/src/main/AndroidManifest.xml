@@ -4,6 +4,10 @@
     package="com.example.ume">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
 
     <application
         android:allowBackup="true"
@@ -14,6 +18,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         tools:targetApi="31">
+        <activity
+            android:name=".PDFDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".CanhBaoTruocKhiLamTracNghiem"
+            android:exported="false" />
+        <activity
+            android:name=".NhomTinhCachNghienCuu"
+            android:exported="false" />
+        <activity
+            android:name=".NhomTinhCachNgheThuat"
+            android:exported="false" />
+        <activity
+            android:name=".NhomTinhCachXaHoi"
+            android:exported="false" />
+        <activity
+            android:name=".NhomTinhCachQuanLy"
+            android:exported="false" />
+        <activity
+            android:name=".NhomTinhCachNghiepVu"
+            android:exported="false" />
+        <activity
+            android:name=".NhomTinhCachKyThuat"
+            android:exported="false" />
+        <activity
+            android:name=".CoSoDaoTao"
+            android:exported="false" />
+        <activity
+            android:name=".CacNhomTinhCach"
+            android:exported="false" />
+        <activity
+            android:name=".ChonTimHieuNgheNghiep"
+            android:exported="false" />
         <activity
             android:name=".PhanTichKetQua"
             android:exported="false" />
