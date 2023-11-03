@@ -21,7 +21,7 @@ public class StartTracNghiem extends Activity {
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                Intent in01=new Intent(arg0.getContext(), CanhBaoTruocKhiLamTracNghiem.class);
+                Intent in01=new Intent(arg0.getContext(), TraLoiTracNghiem.class);
                 startActivity(in01);
             }
         });

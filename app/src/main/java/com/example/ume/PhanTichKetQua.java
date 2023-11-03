@@ -38,11 +38,6 @@ public class PhanTichKetQua extends Activity {
 
         if (highestCount < 5 || highestCount == secondHighestCount) {
             binding.canhBao.setVisibility(View.VISIBLE);
-
-            binding.buttonKiemTraLai.setOnClickListener(arg0 -> {
-                Intent in01 = new Intent(arg0.getContext(), StartTracNghiem.class);
-                startActivity(in01);
-            });
         }
         else {
             if (countKiThuat == highestCount) {

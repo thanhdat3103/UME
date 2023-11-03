@@ -1,7 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-    <LinearLayout
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_chon_tinh_nang"
@@ -17,84 +15,54 @@
             android:textColor="@color/purple_200"
             android:layout_marginTop="25dp"/>
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp">
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            <Button
+                android:id="@+id/trac_nghiem_so_thich"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/trac_nghiem_so_thich" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/tim_hieu_nghe_nghiep" />
+        </LinearLayout>
 
-                    <Button
-                        android:id="@+id/trac_nghiem_so_thich"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/trac_nghiem_so_thich" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/tim_hieu_nghe_nghiep"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/tim_hieu_nghe_nghiep" />
-                </LinearLayout>
+            <Button
+                android:id="@+id/to_hop_mon"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/to_hop_mon" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp">
+            <Button
+                android:id="@+id/cac_nhom_tinh_cach"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/cac_nhom_tinh_cach" />
 
-                    <Button
-                        android:id="@+id/co_so_dao_tao"
-                        android:layout_width="170dp"
-                        android:layout_height="200dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/co_so_dao_tao"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:ignore="MissingConstraints" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/to_hop_mon"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/to_hop_mon" />
-
-                    <Button
-                        android:id="@+id/cac_nhom_tinh_cach"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/cac_nhom_tinh_cach" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </ScrollView>
-
+        </LinearLayout>
     </LinearLayout>
 </layout>

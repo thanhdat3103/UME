@@ -42,29 +42,5 @@ public class ChonTinhNang extends Activity {
                 startActivity(in01);
             }
         });
-
-        binding.timHieuNgheNghiep.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent in01 = new Intent(arg0.getContext(), ChonTimHieuNgheNghiep.class);
-                startActivity(in01);
-            }
-        });
-
-        binding.cacNhomTinhCach.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent in01 = new Intent(arg0.getContext(), CacNhomTinhCach.class);
-                startActivity(in01);
-            }
-        });
-
-        binding.coSoDaoTao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent in01 = new Intent(arg0.getContext(), CoSoDaoTao.class);
-                startActivity(in01);
-            }
-        });
     }
 }

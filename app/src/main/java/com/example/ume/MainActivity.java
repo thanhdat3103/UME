@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
         binding.buttonBatDau.setOnClickListener(arg0 -> {
             Intent in01 = new Intent(arg0.getContext(), ThongTinHocSinh.class);
             startActivity(in01);
+
         });
 
         binding.buttonThoat.setOnClickListener(arg0 -> System.exit(0));
