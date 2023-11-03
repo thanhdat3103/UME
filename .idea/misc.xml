@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1298351833165153" />
         <entry key="app/src/main/res/drawable/custom_edittext_background.xml" value="0.22" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.126" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1925925925925926" />
         <entry key="app/src/main/res/layout/bieu_do_ket_qua.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/cac_nhom_tinh_cach.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/canh_bao_truoc_khi_lam_trac_nghiem.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/chon_tim_hieu_nghe_nghiep.xml" value="0.33" />
         <entry key="app/src/main/res/layout/chon_tinh_nang.xml" value="0.26851851851851855" />
         <entry key="app/src/main/res/layout/chon_to_hop_mon.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/co_so_dao_tao.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/khoi_a.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/khoi_b.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/khoi_c.xml" value="0.37604166666666666" />
@@ -19,6 +24,13 @@
         <entry key="app/src/main/res/layout/khoi_r.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/khoi_t.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/khoi_v.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/nhom_tinh_cach_ky_thuat.xml" value="0.28177083333333336" />
+        <entry key="app/src/main/res/layout/nhom_tinh_cach_nghe_thuat.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/nhom_tinh_cach_nghien_cuu.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/nhom_tinh_cach_nghiep_vu.xml" value="0.28177083333333336" />
+        <entry key="app/src/main/res/layout/nhom_tinh_cach_quan_ly.xml" value="0.28177083333333336" />
+        <entry key="app/src/main/res/layout/nhom_tinh_cach_xa_hoi.xml" value="0.28177083333333336" />
+        <entry key="app/src/main/res/layout/pdf_display.xml" value="0.28177083333333336" />
         <entry key="app/src/main/res/layout/phan_tich_ket_qua.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/start_trac_nghiem.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/thong_tin_hoc_sinh.xml" value="0.37025641025641026" />

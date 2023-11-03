@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ChonTimHieuNgheNghiep">
+
+        <Button
+            android:id="@+id/nhom_nganh_ngon_ngu"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nhom_nganh_ngon_ngu"
+            app:layout_constraintBottom_toTopOf="@+id/nhom_nganh_phan_tich_logic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/nhom_nganh_phan_tich_logic"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nhom_nganh_phan_tich_logic"
+            app:layout_constraintBottom_toTopOf="@+id/nhom_nganh_hinh_hoc_mau_sac_thiet_ke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nhom_nganh_ngon_ngu"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/nhom_nganh_hinh_hoc_mau_sac_thiet_ke"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nhom_nganh_hinh_hoc_mau_sac_thiet_ke"
+            app:layout_constraintBottom_toTopOf="@+id/nhom_nganh_lam_viec_voi_con_nguoi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nhom_nganh_phan_tich_logic"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/nhom_nganh_lam_viec_voi_con_nguoi"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nhom_nganh_lam_viec_voi_con_nguoi"
+            app:layout_constraintBottom_toTopOf="@+id/nhom_nganh_the_chat_co_khi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nhom_nganh_hinh_hoc_mau_sac_thiet_ke"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/nhom_nganh_the_chat_co_khi"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nhom_nganh_the_chat_co_khi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nhom_nganh_lam_viec_voi_con_nguoi"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
