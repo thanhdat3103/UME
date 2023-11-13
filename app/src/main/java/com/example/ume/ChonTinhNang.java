@@ -66,5 +66,13 @@ public class ChonTinhNang extends Activity {
                 startActivity(in01);
             }
         });
+
+        binding.conSoChuDao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent in01 = new Intent(arg0.getContext(), ConSoChuDao.class);
+                startActivity(in01);
+            }
+        });
     }
 }
