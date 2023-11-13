@@ -50,23 +50,30 @@
                         android:background="@drawable/tim_hieu_nghe_nghiep" />
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp">
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/co_so_dao_tao"
-                        android:layout_width="170dp"
+                        android:layout_width="0dp"
                         android:layout_height="200dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@drawable/co_so_dao_tao"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:ignore="MissingConstraints" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:layout_weight="1"
+                        android:background="@drawable/co_so_dao_tao" />
+
+                    <Button
+                        android:id="@+id/con_so_chu_dao"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/con_so_chu_dao" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
