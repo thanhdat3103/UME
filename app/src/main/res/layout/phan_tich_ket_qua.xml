@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/canh_bao"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <Button
                 android:id="@+id/button_kiem_tra_lai"
