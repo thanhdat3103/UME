@@ -1,5 +1,6 @@
 package com.example.ume;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ public class SchoolAdapter extends ArrayAdapter<School> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Log.d("SchoolAdapter.java", "getView(int position, View convertView, ViewGroup parent)");
         // Kiểm tra xem View đã được tái sử dụng chưa, nếu chưa thì tạo mới
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_school, parent, false);

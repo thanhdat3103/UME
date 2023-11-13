@@ -1,10 +1,12 @@
 package com.example.ume;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +28,7 @@ public class CoSoDaoTao extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("CoSoDaoTao.java", "onCreate()");
         CoSoDaoTaoBinding binding = DataBindingUtil.setContentView(this,R.layout.co_so_dao_tao);
 
         schoolDAO = new SchoolDAO(this);
@@ -52,21 +55,27 @@ public class CoSoDaoTao extends Activity {
         });
 
         binding.listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @SuppressLint("LongLogTag")
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                showDeleteDialog(id);
+                Log.d("CoSoDaoTao selectedSchool.id", String.valueOf(adapter.getItem(position).getId()));
+                Log.d("CoSoDaoTao position", String.valueOf(position));
+                Log.d("CoSoDaoTao id", String.valueOf(id));
+                showDeleteDialog(adapter.getItem(position).getId());
                 return true;
             }
         });
     }
 
     private void openWebsite(String url) {
+        Log.d("CoSoDaoTao.java", "openWebsite(String url)");
         Intent intent = new Intent(CoSoDaoTao.this, WebViewActivity.class);
         intent.putExtra("url", url);
         startActivity(intent);
     }
 
     private void showDeleteDialog(final long schoolId) {
+        Log.d("CoSoDaoTao.java", "showDeleteDialog(final long schoolId)");
         AlertDialog.Builder builder = new AlertDialog.Builder(CoSoDaoTao.this);
         builder.setTitle("Confirm Delete");
         builder.setMessage("Are you sure you want to delete this school?");
@@ -91,24 +100,20 @@ public class CoSoDaoTao extends Activity {
     }
 
     private void deleteSchool(long schoolId) {
+        Log.d("CoSoDaoTao.java", "deleteSchool(long schoolId)");
         schoolDAO.deleteSchool(schoolId);
     }
 
-
     private void updateSchoolList() {
+        Log.d("CoSoDaoTao.java", "updateSchoolList()");
         adapter.clear();
         List<School> schools = schoolDAO.getAllSchools();
         adapter.addAll(schools);
 
-        // Auto-update ordinal numbers
-        for (int i = 0; i < schools.size(); i++) {
-            School school = schools.get(i);
-            school.setId(i + 1); // Assuming IDs represent the ordinal numbers
-            schoolDAO.updateSchool(school);
-        }
     }
 
     public void onAddSchoolClick(View view) {
+        Log.d("CoSoDaoTao.java", "onAddSchoolClick(View view)");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Thêm trường học");
 
@@ -154,14 +159,14 @@ public class CoSoDaoTao extends Activity {
     }
 
     private boolean isValidUrl(String url) {
+        Log.d("CoSoDaoTao.java", "isValidUrl(String url)");
         return Patterns.WEB_URL.matcher(url).matches();
     }
-
-
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.d("CoSoDaoTao.java", "onDestroy()");
         schoolDAO.close();
     }
 }

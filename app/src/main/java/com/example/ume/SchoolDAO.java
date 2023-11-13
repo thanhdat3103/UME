@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,18 +16,22 @@ public class SchoolDAO {
     private DatabaseHelper dbHelper;
 
     public SchoolDAO(Context context) {
+        Log.d("SchoolDAO.java", "SchoolDAO(Context context)");
         dbHelper = new DatabaseHelper(context);
     }
 
     public void open() {
+        Log.d("SchoolDAO.java", "open()");
         database = dbHelper.getWritableDatabase();
     }
 
     public void close() {
+        Log.d("SchoolDAO.java", "close()");
         dbHelper.close();
     }
 
     public long addSchool(School school) {
+        Log.d("SchoolDAO.java", "addSchool(School school)");
         ContentValues values = new ContentValues();
         values.put(DatabaseHelper.COLUMN_NAME, school.getName());
         values.put(DatabaseHelper.COLUMN_WEBSITE, school.getWebsite());
@@ -35,6 +40,7 @@ public class SchoolDAO {
     }
 
     public boolean isDatabaseEmpty() {
+        Log.d("SchoolDAO.java", "isDatabaseEmpty()");
         Cursor cursor = database.rawQuery("SELECT 1 FROM " + DatabaseHelper.TABLE_NAME, null);
         boolean isEmpty = cursor.getCount() == 0;
         cursor.close();
@@ -42,6 +48,7 @@ public class SchoolDAO {
     }
 
     public void deleteSchool(long schoolId) {
+        Log.d("SchoolDAO.java", "deleteSchool(long schoolId)");
         database.delete(
                 DatabaseHelper.TABLE_NAME,
                 DatabaseHelper.COLUMN_ID + "=?",
@@ -49,8 +56,8 @@ public class SchoolDAO {
         );
     }
 
-
     public void addSampleSchools() {
+        Log.d("SchoolDAO.java", "addSampleSchools()");
         String[] sampleNames = {
                 "THPT AN MỸ",
                 "THPT BÀU BÀNG",
@@ -146,21 +153,9 @@ public class SchoolDAO {
         }
     }
 
-    public int updateSchool(School school) {
-        ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_NAME, school.getName());
-        values.put(DatabaseHelper.COLUMN_WEBSITE, school.getWebsite());
-
-        return database.update(
-                DatabaseHelper.TABLE_NAME,
-                values,
-                DatabaseHelper.COLUMN_ID + "=?",
-                new String[]{String.valueOf(school.getId())}
-        );
-    }
-
     @SuppressLint("Range")
     public List<School> getAllSchools() {
+        Log.d("SchoolDAO.java", "getAllSchools()");
         List<School> schools = new ArrayList<>();
         Cursor cursor = database.query(
                 DatabaseHelper.TABLE_NAME,
@@ -176,6 +171,7 @@ public class SchoolDAO {
             do {
                 School school = new School();
                 school.setId(cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COLUMN_ID)));
+                Log.d("school.setId : ", String.valueOf(cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COLUMN_ID))));
                 school.setName(cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_NAME)));
                 school.setWebsite(cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_WEBSITE)));
                 schools.add(school);
