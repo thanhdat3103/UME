@@ -35,6 +35,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -51,6 +53,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -59,6 +62,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,6 +71,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -75,6 +80,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -83,6 +89,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -91,6 +98,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -99,6 +107,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,6 +116,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/ky_thuat_answer_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -124,6 +134,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -132,6 +143,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -140,6 +152,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -148,6 +161,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,6 +170,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -164,6 +179,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -172,6 +188,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -180,6 +197,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -188,6 +206,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -196,6 +215,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghien_cuu_answer_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -213,6 +233,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -221,6 +242,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -229,6 +251,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -237,6 +260,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -245,6 +269,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,6 +278,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -261,6 +287,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -269,6 +296,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -277,6 +305,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -285,6 +314,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghe_thuat_answer_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -302,6 +332,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -310,6 +341,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -318,6 +350,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -326,6 +359,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -334,6 +368,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -342,6 +377,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -350,6 +386,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -358,6 +395,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -366,6 +404,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -374,6 +413,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/xa_hoi_answer_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -391,6 +431,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -399,6 +440,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_Li_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -407,6 +449,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -415,6 +458,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -423,6 +467,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -431,6 +476,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -439,6 +485,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -447,6 +494,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -455,6 +503,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -463,6 +512,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/quan_li_answer_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -480,6 +530,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -488,6 +539,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -496,6 +548,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -504,6 +557,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -512,6 +566,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -520,6 +575,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -528,6 +584,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -536,6 +593,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -544,6 +602,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -552,6 +611,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
+                        android:buttonTint="@color/black"
                         android:id="@+id/nghiep_vu_answer_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

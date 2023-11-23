@@ -1,30 +1,78 @@
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/main_background"
-        android:orientation="vertical"
-        android:paddingStart="60dp"
-        tools:ignore="RtlSymmetry">
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/main_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_background"
+            android:orientation="vertical"
+            android:paddingStart="60dp"
+            tools:ignore="RtlSymmetry">
 
-        <Button
-            android:id="@+id/button_bat_dau"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/button_bat_dau" />
+            <Button
+                android:id="@+id/button_bat_dau"
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_bat_dau" />
 
-        <Button
-            android:id="@+id/button_thoat"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/button_thoat" />
+            <Button
+                android:id="@+id/button_thoat"
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_thoat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_nhap_thong_tin"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/thong_tin_hoc_sinh">
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="260dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="220dp"
+                android:hint="Nhập tên"
+                android:paddingLeft="20dp"
+                android:background="@drawable/custom_edittext_background"/>
+
+            <EditText
+                android:id="@+id/editTextClass"
+                android:layout_width="260dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="52dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/custom_edittext_background"
+                android:hint="Nhập lớp"
+                />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bt_continue"
+                android:id="@+id/button_next" />
+
+        </LinearLayout>
     </LinearLayout>
-
 </layout>
