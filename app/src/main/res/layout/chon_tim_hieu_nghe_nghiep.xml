@@ -6,9 +6,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ChonTimHieuNgheNghiep">
+        tools:context=".ChonTimHieuNgheNghiep"
+        android:background="@drawable/background_chon_tim_hieu_nghe_nghiep">
 
         <Button
+            android:layout_marginTop="100dp"
             android:id="@+id/nhom_nganh_ngon_ngu"
             android:layout_width="300dp"
             android:layout_height="wrap_content"

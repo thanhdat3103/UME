@@ -59,6 +59,7 @@ public class SchoolDAO {
     public void addSampleSchools() {
         Log.d("SchoolDAO.java", "addSampleSchools()");
         String[] sampleNames = {
+                "SỞ GIÁO DỤC VÀ ĐÀO TẠO BÌNH DƯƠNG",
                 "THPT AN MỸ",
                 "THPT BÀU BÀNG",
                 "THPT BẾN CÁT",
@@ -102,6 +103,7 @@ public class SchoolDAO {
         };
 
         String[] sampleWebsites = {
+                "https://www.binhduong.edu.vn/",
                 "http://thptanmy.web.vnedu.vn/",
                 "http://thptbaubang.edu.vn/",
                 "http://thptbencat.edu.vn/",
