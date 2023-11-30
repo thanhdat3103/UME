@@ -37,8 +37,10 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View arg0) {
-                String tenHocSinh = binding.editTextName.getText().toString();
+                mediaPlayer.stop();
+                mediaPlayer.release();
 
+                String tenHocSinh = binding.editTextName.getText().toString();
                 Intent in01 = new Intent(arg0.getContext(), ChonTinhNang.class);
                 in01.putExtra("tenHocSinh", tenHocSinh); // Đặt tên dữ liệu để bạn có thể truy cập nó ở màn hình tiếp theo
                 startActivity(in01);
@@ -46,13 +48,5 @@ public class MainActivity extends Activity {
         });
 
         binding.buttonThoat.setOnClickListener(arg0 -> System.exit(0));
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mediaPlayer.stop();
-        mediaPlayer.release();
-
     }
 }
