@@ -32,8 +32,29 @@
                 android:textStyle="bold"/>
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/listView"
+<!--        <ListView-->
+<!--            android:id="@+id/listView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@+id/btnAddSchool"-->
+<!--            android:layout_below="@id/layoutHeader"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:divider="@android:color/darker_gray"-->
+<!--            android:dividerHeight="1dp"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAddSchool"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:onClick="onAddSchoolClick"-->
+<!--            android:text="Thêm trường"-->
+<!--            tools:ignore="UsingOnClickInXml" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/btnAddSchool"
@@ -52,6 +73,7 @@
             android:onClick="onAddSchoolClick"
             android:text="Thêm trường"
             tools:ignore="UsingOnClickInXml" />
+
     </RelativeLayout>
 
 </layout>

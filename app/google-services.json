@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "754918568769",
+    "project_id": "ume-app-4bfce",
+    "storage_bucket": "ume-app-4bfce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754918568769:android:5ddb89a18946231e9127c0",
+        "android_client_info": {
+          "package_name": "com.example.ume"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-_lvTbOmhbT36j7wQG_Oeo1bsGrP15TQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

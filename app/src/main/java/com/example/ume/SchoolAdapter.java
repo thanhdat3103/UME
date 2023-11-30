@@ -1,39 +1,136 @@
 package com.example.ume;
+
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
-import android.util.Log;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
-public class SchoolAdapter extends ArrayAdapter<School> {
+//public class SchoolAdapter extends ArrayAdapter<School> {
+//
+//    public SchoolAdapter(Context context, List<School> schools) {
+//        super(context, 0, schools);
+//    }
+//
+//    @Override
+//    public View getView(int position, View convertView, ViewGroup parent) {
+//        Log.d("SchoolAdapter.java", "getView(int position, View convertView, ViewGroup parent)");
+//        // Kiểm tra xem View đã được tái sử dụng chưa, nếu chưa thì tạo mới
+//        if (convertView == null) {
+//            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_school, parent, false);
+//        }
+//
+//        // Lấy dữ liệu cho vị trí hiện tại
+//        School school = getItem(position);
+//
+//        // Ánh xạ các thành phần UI
+//        TextView nameTextView = convertView.findViewById(R.id.nameTextView);
+//        TextView websiteTextView = convertView.findViewById(R.id.websiteTextView);
+//
+//        // Hiển thị dữ liệu
+//        nameTextView.setText(school.getName());
+//        websiteTextView.setText(school.getWebsite());
+//
+//        return convertView;
+//    }
+//}
 
-    public SchoolAdapter(Context context, List<School> schools) {
-        super(context, 0, schools);
+
+public class SchoolAdapter extends RecyclerView.Adapter<SchoolAdapter.ViewHolder> {
+    private List<School> schoolList;
+    private Context context;
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView textViewName;
+        public TextView textViewWebsite;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            textViewName = itemView.findViewById(R.id.nameTextView);
+            textViewWebsite = itemView.findViewById(R.id.websiteTextView);
+        }
+    }
+
+    public SchoolAdapter(Context context, List<School> schoolList) {
+        this.context = context;
+        this.schoolList = schoolList;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        Log.d("SchoolAdapter.java", "getView(int position, View convertView, ViewGroup parent)");
-        // Kiểm tra xem View đã được tái sử dụng chưa, nếu chưa thì tạo mới
-        if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_school, parent, false);
-        }
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_school, parent, false);
+        return new ViewHolder(view);
+    }
 
-        // Lấy dữ liệu cho vị trí hiện tại
-        School school = getItem(position);
+    @Override
+    public void onBindViewHolder(ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        School school = schoolList.get(position);
+        holder.textViewName.setText(school.getName());
+        holder.textViewWebsite.setText(school.getWebsite());
 
-        // Ánh xạ các thành phần UI
-        TextView nameTextView = convertView.findViewById(R.id.nameTextView);
-        TextView websiteTextView = convertView.findViewById(R.id.websiteTextView);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWebsite(school.getWebsite(), v.getContext());
+            }
+        });
 
-        // Hiển thị dữ liệu
-        nameTextView.setText(school.getName());
-        websiteTextView.setText(school.getWebsite());
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                showDeleteConfirmationDialog(position);
+                return true;
+            }
+        });
+    }
 
-        return convertView;
+    @Override
+    public int getItemCount() {
+        return schoolList.size();
+    }
+
+    private void openWebsite(String url, Context context) {
+        Intent intent = new Intent(context, WebViewActivity.class);
+        intent.putExtra("url", url);
+        context.startActivity(intent);
+    }
+
+    private void showDeleteConfirmationDialog(final int position) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder.setTitle("Xác nhận xóa");
+        alertDialogBuilder.setMessage("Bạn có chắc chắn muốn xóa trường này?");
+
+        alertDialogBuilder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                removeSchool(position);
+            }
+        });
+
+        alertDialogBuilder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+
+    private void removeSchool(int position) {
+        DatabaseReference selectedSchoolRef = FirebaseDatabase.getInstance().getReference("schools").child(schoolList.get(position).getKey());
+        selectedSchoolRef.removeValue();
     }
 }
