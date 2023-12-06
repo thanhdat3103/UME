@@ -1,5 +1,6 @@
 package com.example.ume;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -198,8 +200,9 @@ public class CoSoDaoTao extends Activity {
         recyclerView.setAdapter(schoolAdapter);
 
         schoolsRef.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 schoolList.clear();
                 for (DataSnapshot schoolSnapshot : dataSnapshot.getChildren()) {
                     School school = schoolSnapshot.getValue(School.class);
@@ -210,7 +213,7 @@ public class CoSoDaoTao extends Activity {
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.e("ListActivity", "Lỗi: " + databaseError.getMessage());
             }
         });

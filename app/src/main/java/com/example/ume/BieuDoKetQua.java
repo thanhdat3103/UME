@@ -74,7 +74,7 @@ public class BieuDoKetQua extends Activity {
 
         // Thêm màu sắc cho từng cột
         dataSet.setColors(new int[]{Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.MAGENTA, Color.CYAN});
-        dataSet.setValueTextColor(Color.BLACK); // Màu của giá trị trên cột
+        dataSet.setValueTextColor(Color.WHITE); // Màu của giá trị trên cột
         dataSet.setDrawValues(true); // Cho phép hiển thị giá trị trên cột
 
         BarData barData = new BarData(dataSet);

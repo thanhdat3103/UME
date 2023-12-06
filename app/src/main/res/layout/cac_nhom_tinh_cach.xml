@@ -1,86 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/cac_nhom_tinh_cach_background"
         android:orientation="vertical"
         tools:context=".CacNhomTinhCach">
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/firstGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="150dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/secondGroup"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints">
 
             <Button
                 android:id="@+id/nhom_tinh_cach_ky_thuat"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/nhom_tinh_cach_ky_thuat" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/nhom_tinh_cach_ky_thuat"
+                app:layout_constraintEnd_toStartOf="@+id/nhom_tinh_cach_nghiep_vu"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <Button
                 android:id="@+id/nhom_tinh_cach_nghiep_vu"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/nhom_tinh_cach_nghiep_vu" />
-        </LinearLayout>
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/nhom_tinh_cach_nghiep_vu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/nhom_tinh_cach_ky_thuat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/secondGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/thirdGroup"
+            app:layout_constraintTop_toBottomOf="@+id/firstGroup"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints">
 
             <Button
                 android:id="@+id/nhom_tinh_cach_quan_ly"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/nhom_tinh_cach_quan_ly" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/nhom_tinh_cach_quan_ly"
+                app:layout_constraintEnd_toStartOf="@+id/nhom_tinh_cach_xa_hoi"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <Button
                 android:id="@+id/nhom_tinh_cach_xa_hoi"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/nhom_tinh_cach_xa_hoi" />
-        </LinearLayout>
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/nhom_tinh_cach_xa_hoi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/nhom_tinh_cach_quan_ly"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/thirdGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondGroup"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints">
 
             <Button
                 android:id="@+id/nhom_tinh_cach_nghe_thuat"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/nhom_tinh_cach_nghe_thuat" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/nhom_tinh_cach_nghe_thuat"
+                app:layout_constraintEnd_toStartOf="@+id/nhom_tinh_cach_nghien_cuu"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <Button
                 android:id="@+id/nhom_tinh_cach_nghien_cuu"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/nhom_tinh_cach_nghien_cuu" />
-        </LinearLayout>
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/nhom_tinh_cach_nghien_cuu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/nhom_tinh_cach_nghe_thuat"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
