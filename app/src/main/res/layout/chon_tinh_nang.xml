@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,98 +12,121 @@
             android:id="@+id/ten_hoc_sinh"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginLeft="235dp"
-            android:textSize="30dp"
-            android:textStyle="bold"
+            android:layout_marginStart="235dp"
+            android:layout_marginTop="25dp"
             android:textColor="@color/purple_200"
-            android:layout_marginTop="25dp"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-        <ScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                tools:ignore="MissingConstraints">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <Button
+                    android:id="@+id/trac_nghiem_so_thich"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/trac_nghiem_so_thich"
+                    app:layout_constraintEnd_toStartOf="@+id/tim_hieu_nghe_nghiep"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-                    <Button
-                        android:id="@+id/trac_nghiem_so_thich"
-                        android:layout_width="0dp"
-                        android:layout_height="180dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/trac_nghiem_so_thich" />
+                <Button
+                    android:id="@+id/tim_hieu_nghe_nghiep"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/tim_hieu_nghe_nghiep"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/trac_nghiem_so_thich"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <Button
-                        android:id="@+id/tim_hieu_nghe_nghiep"
-                        android:layout_width="0dp"
-                        android:layout_height="180dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/tim_hieu_nghe_nghiep" />
-                </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
+                app:layout_constraintVertical_bias="0.5"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+                <Button
+                    android:id="@+id/co_so_dao_tao"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/co_so_dao_tao"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/con_so_chu_dao"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
 
-                    <Button
-                        android:id="@+id/co_so_dao_tao"
-                        android:layout_width="0dp"
-                        android:layout_height="180dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/co_so_dao_tao" />
+                <Button
+                    android:id="@+id/con_so_chu_dao"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/con_so_chu_dao"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/co_so_dao_tao"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <Button
-                        android:id="@+id/con_so_chu_dao"
-                        android:layout_width="0dp"
-                        android:layout_height="180dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/con_so_chu_dao" />
-                </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintVertical_bias="0.5"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal">
+                <Button
+                    android:id="@+id/to_hop_mon"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/to_hop_mon"
+                    app:layout_constraintEnd_toStartOf="@+id/cac_nhom_tinh_cach"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-                    <Button
-                        android:id="@+id/to_hop_mon"
-                        android:layout_width="0dp"
-                        android:layout_height="180dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/to_hop_mon" />
-
-                    <Button
-                        android:id="@+id/cac_nhom_tinh_cach"
-                        android:layout_width="0dp"
-                        android:layout_height="180dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/cac_nhom_tinh_cach" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </ScrollView>
+                <Button
+                    android:id="@+id/cac_nhom_tinh_cach"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/cac_nhom_tinh_cach"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/to_hop_mon"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </layout>
