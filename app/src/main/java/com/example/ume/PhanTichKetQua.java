@@ -20,6 +20,14 @@ public class PhanTichKetQua extends Activity {
         super.onCreate(savedInstanceState);
         PhanTichKetQuaBinding binding = DataBindingUtil.setContentView(this, R.layout.phan_tich_ket_qua);
 
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in01 = new Intent(v.getContext(), ChonTinhNang.class);
+                startActivity(in01);
+            }
+        });
+
         Intent intent = getIntent();
         if (intent != null) {
             countKiThuat = intent.getIntExtra("countKiThuat", 0);

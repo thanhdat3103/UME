@@ -25,5 +25,13 @@ public class CanhBaoTruocKhiLamTracNghiem extends Activity {
                 startActivity(in01);
             }
         });
+
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in01 = new Intent(v.getContext(), ChonTinhNang.class);
+                startActivity(in01);
+            }
+        });
     }
 }
