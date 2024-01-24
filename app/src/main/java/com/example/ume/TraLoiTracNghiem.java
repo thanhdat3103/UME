@@ -32,6 +32,14 @@ public class TraLoiTracNghiem extends Activity {
         super.onCreate(savedInstanceState);
         TraLoiTracNghiemBinding binding = DataBindingUtil.setContentView(this, R.layout.tra_loi_trac_nghiem);
 
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in01 = new Intent(v.getContext(), ChonTinhNang.class);
+                startActivity(in01);
+            }
+        });
+
         binding.btNext.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -114,7 +122,6 @@ public class TraLoiTracNghiem extends Activity {
         });
 
         binding.btCheck.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View arg0) {
                 Intent in01 = new Intent(arg0.getContext(), BieuDoKetQua.class);

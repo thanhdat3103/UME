@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "754918568769",
-    "project_id": "ume-app-4bfce",
-    "storage_bucket": "ume-app-4bfce.appspot.com"
+    "project_number": "808312975126",
+    "project_id": "ume-thaibao",
+    "storage_bucket": "ume-thaibao.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:754918568769:android:5ddb89a18946231e9127c0",
+        "mobilesdk_app_id": "1:808312975126:android:9e48412821e81ac6deaa37",
         "android_client_info": {
           "package_name": "com.example.ume"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB-_lvTbOmhbT36j7wQG_Oeo1bsGrP15TQ"
+          "current_key": "AIzaSyBqcolXjh4ScS0iBbIUNM6R3eYJus5AfSk"
         }
       ],
       "services": {

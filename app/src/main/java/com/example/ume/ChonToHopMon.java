@@ -16,6 +16,14 @@ public class ChonToHopMon extends Activity {
         super.onCreate(savedInstanceState);
         ChonToHopMonBinding binding = DataBindingUtil.setContentView(this, R.layout.chon_to_hop_mon);
 
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in01 = new Intent(v.getContext(), ChonTinhNang.class);
+                startActivity(in01);
+            }
+        });
+
         binding.buttonKhoiA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

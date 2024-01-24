@@ -43,6 +43,14 @@ public class BieuDoKetQua extends Activity {
 
         hienThiBieuDo();
 
+        binding.homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in01 = new Intent(v.getContext(), ChonTinhNang.class);
+                startActivity(in01);
+            }
+        });
+
         binding.buttonReadMore.setOnClickListener(new View.OnClickListener() {
 
             @Override
