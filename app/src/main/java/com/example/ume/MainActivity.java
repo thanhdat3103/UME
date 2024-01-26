@@ -23,30 +23,22 @@ public class MainActivity extends Activity {
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.shape_of_you);
         mediaPlayer.start();
 
-        binding.buttonBatDau.setOnClickListener(arg0 -> {
-            try {
-                TimeUnit.MILLISECONDS.sleep(100);
-                binding.mainActivity.setVisibility(View.GONE);
-                binding.thongTinHocSinh.setVisibility(View.VISIBLE);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        });
-
-        binding.buttonNext.setOnClickListener(new View.OnClickListener() {
-
+        binding.buttonBatDau.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
+            public void onClick(View v) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
 
-                String tenHocSinh = binding.editTextName.getText().toString();
-                Intent in01 = new Intent(arg0.getContext(), ChonTinhNang.class);
-                in01.putExtra("tenHocSinh", tenHocSinh); // Đặt tên dữ liệu để bạn có thể truy cập nó ở màn hình tiếp theo
-                startActivity(in01);
+                Intent intent = new Intent(v.getContext(), ThongTinHocSinh.class);
+                startActivity(intent);
             }
         });
 
-        binding.buttonThoat.setOnClickListener(arg0 -> System.exit(0));
+        binding.buttonThoat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
+            }
+        });
     }
 }
