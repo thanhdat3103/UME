@@ -16,37 +16,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
-
-//public class SchoolAdapter extends ArrayAdapter<School> {
-//
-//    public SchoolAdapter(Context context, List<School> schools) {
-//        super(context, 0, schools);
-//    }
-//
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//        Log.d("SchoolAdapter.java", "getView(int position, View convertView, ViewGroup parent)");
-//        // Kiểm tra xem View đã được tái sử dụng chưa, nếu chưa thì tạo mới
-//        if (convertView == null) {
-//            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_school, parent, false);
-//        }
-//
-//        // Lấy dữ liệu cho vị trí hiện tại
-//        School school = getItem(position);
-//
-//        // Ánh xạ các thành phần UI
-//        TextView nameTextView = convertView.findViewById(R.id.nameTextView);
-//        TextView websiteTextView = convertView.findViewById(R.id.websiteTextView);
-//
-//        // Hiển thị dữ liệu
-//        nameTextView.setText(school.getName());
-//        websiteTextView.setText(school.getWebsite());
-//
-//        return convertView;
-//    }
-//}
-
-
 public class SchoolAdapter extends RecyclerView.Adapter<SchoolAdapter.ViewHolder> {
     private List<School> schoolList;
     private Context context;

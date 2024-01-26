@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_nhap_thong_tin"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/thong_tin_hoc_sinh">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="260dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="220dp"
+            android:hint="Nhập tên"
+            android:paddingLeft="20dp"
+            android:background="@drawable/custom_edittext_background"/>
+
+        <EditText
+            android:id="@+id/editTextClass"
+            android:layout_width="260dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="52dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/custom_edittext_background"
+            android:hint="Nhập lớp"
+            />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bt_continue"
+            android:id="@+id/button_next" />
+
+    </LinearLayout>
+</layout>
